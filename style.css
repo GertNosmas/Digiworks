@@ -639,7 +639,7 @@
 }
 
 .main-page .message-input {
-  height: 100%;
+  height: 92.8%;
   resize: vertical;
   min-height: 20vh;
   font-family: "Inter", Helvetica;
@@ -675,16 +675,6 @@
   line-height: normal;
   padding: 1.1vh 1.04vw;
   box-sizing: border-box;
-}
-
-.main-page .form-label {
-  font-family: "Inter", Helvetica;
-  font-weight: 600;
-  color: #03357c;
-  font-size: 0.83vw;
-  letter-spacing: 0;
-  line-height: normal;
-  padding-left: 0.52vw;
 }
 
 .main-page .form-field.message-field {
