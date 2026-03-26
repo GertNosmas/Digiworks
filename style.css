@@ -1,0 +1,333 @@
+@font-face {
+    font-family: "Inter Regular";
+    font-weight: 300;
+    src: url(fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: "Inter Thick";
+    font-weight: 800;
+    src: url(fonts/Inter/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+:root {
+    --primary-color: #03357c; 
+    --secondary-color: #ffcc00; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    outline: none;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+main section h2 {
+    font-weight: 600;
+    font-size: 2em;
+}
+
+body {
+    font-family: "Inter Regular";
+    font-size: 200;
+    overflow-x: hidden;
+}
+
+a, button{
+    font-family: "Inter Regular";
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.newline {
+    display: block;
+    margin-top: 20px;
+}
+
+#mobile-open-nav, #mobile-nav-overlay {
+    display: none;
+}
+
+#nav-logo {
+    background-image: url("assets/LLLOOOGGGOOO.svg");
+    width: 10em;
+    height: 2em;
+    padding: 2em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer
+}
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1em;
+}
+
+#nav-list {
+    display: flex;
+    gap: 2vw;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+
+#about-us {
+    --text-width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 500px;
+    width: 100vw;
+    background-image: url(https://c.animaapp.com/EyiGRxWn/img/hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    font-weight: 800;
+    color: var(--primary-color);
+    background-color: #F2F3F7;
+    padding-right: 10vw;
+    text-align: center;
+}
+
+
+#about-us-text {
+    width: 20vw;
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+#about-us-text span {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 800;
+    font-size: clamp(10px, 2.2vw, 32px);
+}
+
+#contact-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    width: calc(var(--text-width) / 1.4);
+    height: fit-content;
+    padding: 10px 0;
+    font-size: clamp(1em, 2vw, 1.3em);
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/*#contact-us::after {
+    content: url("https://c.animaapp.com/EyiGRxWn/img/mail-send-envelope-streamline-core-2.svg");
+}*/
+
+.more-info {
+    padding: 50px 6vw;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 400;
+}
+
+.more-info h2 {
+    font-family: "Inter Regular";
+    font-size: 50px;
+    color: var(--secondary-color);
+    padding-bottom: 20px;
+}
+
+.more-info img {
+    width: 50vw;
+    padding: 20px;
+    padding-left: 0;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.info-row-one {
+    font-family: "Inter Thick";
+}
+
+.info-row-two {
+    line-height: 20px;
+}
+
+.services {
+    padding: 40px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 90px;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.services-container h2 {
+    color: var(--primary-color);
+}
+
+.services-row { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    hyphens: auto;
+    gap: 30px;
+    width: 200px;
+    line-height: 20px;
+}
+
+.services-row img{
+    width: clamp(80px, 9vw, 100px);
+}
+
+footer {
+    background-color: var(--primary-color);
+    width: 100vw;
+    padding: 2em;
+}
+
+
+.copyright {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    color: white;
+}
+
+.copyright img {
+    width: 10em;
+}
+
+@media(max-width: 914px) {
+    .mobile-heading {
+        font-size: clamp(2em, 8vw, 2.4em);
+    }
+
+    #nav-list {
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        height: 0px;
+        width: 100vw;
+        top: 40px;
+        right: 0vw;
+        transition: 0.2s;
+    }
+
+    #nav-list:target{
+        height: fit-content;
+        max-height: none;
+        flex-direction: column;
+        background-color: white;
+        padding: 80px;
+    }
+
+    #mobile-open-nav {
+        display: block;
+        font-size: 30px;
+        background: none;
+        border: none;
+        text-decoration: none;
+        color: var(--primary-color);
+        padding-top: 10px;
+    }
+
+    #mobile-nav-overlay {
+        position: fixed;
+        display: block;
+        background: none;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: -1;
+    }
+
+    #about-us {
+        background-position: 260vw;
+        margin: none;
+        padding: 10%;
+        height: fit-content;
+    }
+
+    #about-us-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4em;
+    }
+
+    #contact-us {
+        width: fit-content;
+        height: 30px;
+        padding: 20px 40px;
+    }
+
+    #about-us-text {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    #about-us-text span {
+        margin: 30px;
+        font-size: clamp(38px, 5vw, 42px);
+    }
+
+    .info-container {
+        flex-wrap: wrap;
+    }
+
+    .more-info img {
+        width: 90vw;
+    }
+}
